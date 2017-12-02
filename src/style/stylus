@@ -1,0 +1,12 @@
+.content
+  min-height: 100px;
+  min-width: 100px;
+  background: yellow;
+  display: flex;
+  .side
+    flex : 0 0 50px;
+    background: red;
+  .main
+    flex: 1;
+    background: pink;
+    transform: scale(.5);
