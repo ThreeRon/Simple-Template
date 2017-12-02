@@ -1,0 +1,19 @@
+@import "mixin";
+@import "base";
+@import "variable";
+
+body {
+  height: 100%;
+  background-image: url('../image/p1-bg-lv1.jpg');
+}
+.content {
+  display: flex;
+}
+.side {
+  flex: 0 0 300px;
+  height: 100%;
+  background: yellow;
+}
+.main {
+  flex: 1;
+}

@@ -1,5 +1,5 @@
 import {util} from './util';
-import '../style/style.css';
+import '../style/index.css';
 
 window.onload = function () {
   let B = util();
