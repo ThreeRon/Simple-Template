@@ -11,22 +11,13 @@ const config = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.css$/,
-      //   exclude: /node_modules/,
-      //   use: [
-      //     {loader: 'style-loader'},
-      //     {loader: 'css-loader', options: {importLoaders: 1}},
-      //     {loader: 'postcss-loader'},
-      //     {loader: 'stylus-loader'}
-      //   ]
-      // },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'postcss-loader', 'stylus-loader']
-        })
+        }),
+        exclude: /node_modules/,
       },
       {
         test: /\.js$/,
@@ -61,7 +52,7 @@ const config = {
   ],
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: "./dist", //本地服务器所加载的页面所在的目录
+    contentBase: "./dist",    //本地服务器所加载的页面所在的目录
     historyApiFallback: true, //不跳转
     inline: true
   }
